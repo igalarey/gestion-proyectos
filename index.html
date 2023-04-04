@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de proyectos</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+  
+  <header>
+    <h2 class="logo">Logo</h2>
+    <nav class="navegacion">
+      <a href="#">Inicio</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+      <a href="#" class="sesion" id="BtnLogin">Iniciar sesión</a>
+      <button class="btn_registro" id="BtnRegis">Registrarse</button>
+    </nav>
+  </header>
+
+  <!-- Formularios -->
+
+  <section class="sesiones">
+    <div class="formularios" id="formularios">
+
+      <!-- Formulario de inicio de sesión -->
+      
+      <div class="login_form" id="login_form">
+        <form action="#">
+          <h1>¡Hola de nuevo!</h1>
+          <div class="caja">
+            <input type="Correo electrónico" placeholder="Introduce tu correo electrónico">
+          </div>
+          <div class="caja">
+            <input type="Contraseña" placeholder="Introduce tu contraseña">
+          </div>
+          <a href="#" class="olv_cont">¿Has olvidado tu contraseña?</a>
+          <button class="btn_sesion">Iniciar sesión</button>
+          <div class="log_regis">
+            ¿No tienes una cuenta? <a href="#" id="registro">Registrate.</a>
+          </div>
+        </form>
+      </div>
+  
+      <!-- Formulario de registro -->
+  
+      <div class="registro_form" id="registro_form">
+        <form action="#">
+          <h1>Registrarse</h1>
+          <div class="caja">
+            <input type="Correo electrónico" placeholder="Introduce tu correo electrónico">
+          </div>
+          <div class="caja">
+            <input type="Contraseña" placeholder="Introduce tu contraseña">
+          </div>
+          <a href="#" class="olv_cont">¿Has olvidado tu contraseña?</a>
+          <button class="btn_sesion">Comencemos</button>
+          <div class="log_regis">
+            ¿Ya tienes una cuenta? <a href="#" id="login">Inicia sesión.</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
