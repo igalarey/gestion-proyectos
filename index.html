@@ -11,64 +11,94 @@
 
 <body>
 
+
   <!-- Cabecera -->
   
   <header>
-    <h2 class="logo">Logo</h2>
-    <nav class="navegacion">
-      <a href="#">Inicio</a>
-      <a href="#">Sobre nosotros</a>
-      <a href="#">Servicios</a>
-      <a href="#">Contacto</a>
-      <a href="#" class="sesion" id="BtnLogin">Iniciar sesión</a>
-      <button class="btn_registro" id="BtnRegis">Registrarse</button>
+    <h2 class="logo">Gespro</h2>
+    <div class="hamburguesa">
+      <div class="linea"></div>
+      <div class="linea"></div>
+      <div class="linea"></div>
+    </div>
+    <nav class="op_nav">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav class="op_ses">
+      <a href="#" id="btn_login">Iniciar sesión</a>
+      <button class="btn_registro" id="btn_registro">Registrarse</button>
     </nav>
   </header>
 
-  <!-- Formularios -->
+  <img src="./imgs/izquierda.jpg" alt="">
 
-  <section class="sesiones">
-    <div class="formularios" id="formularios">
+  <div class="fondo_opaco" id="fondo_opaco">
 
-      <!-- Formulario de inicio de sesión -->
-      
-      <div class="login_form" id="login_form">
-        <form action="#">
-          <h1>¡Hola de nuevo!</h1>
-          <div class="caja">
-            <input type="Correo electrónico" placeholder="Introduce tu correo electrónico">
-          </div>
-          <div class="caja">
-            <input type="Contraseña" placeholder="Introduce tu contraseña">
-          </div>
-          <a href="#" class="olv_cont">¿Has olvidado tu contraseña?</a>
-          <button class="btn_sesion">Iniciar sesión</button>
-          <div class="log_regis">
-            ¿No tienes una cuenta? <a href="#" id="registro">Registrate.</a>
-          </div>
-        </form>
-      </div>
-  
-      <!-- Formulario de registro -->
-  
-      <div class="registro_form" id="registro_form">
-        <form action="#">
-          <h1>Registrarse</h1>
-          <div class="caja">
-            <input type="Correo electrónico" placeholder="Introduce tu correo electrónico">
-          </div>
-          <div class="caja">
-            <input type="Contraseña" placeholder="Introduce tu contraseña">
-          </div>
-          <a href="#" class="olv_cont">¿Has olvidado tu contraseña?</a>
-          <button class="btn_sesion">Comencemos</button>
-          <div class="log_regis">
-            ¿Ya tienes una cuenta? <a href="#" id="login">Inicia sesión.</a>
-          </div>
-        </form>
-      </div>
+    <!-- Formulario de inicio de sesión -->
+    
+    <div class="form_login" id="form_login">
+      <form action="#">
+        <h1>¡Hola de nuevo!</h1>
+        <div class="input">
+          <input type="email" placeholder="Introduce tu correo electrónico" required>
+        </div>
+        <div class="input">
+          <input type="password" placeholder="Introduce tu contraseña" required>
+        </div>
+        <a href="#" class="olv_cont">¿Has olvidado tu contraseña?</a>
+        <button class="btn_sesion">Iniciar sesión</button>
+        <div class="form_btn">
+          ¿No tienes una cuenta? <a href="#" id="form_login_btn_regis">Registrate.</a>
+        </div>
+      </form>
     </div>
-  </section>
+
+    <!-- Formulario de registro -->
+
+    <div class="form_registro" id="form_registro">
+      <form action="#">
+        <h1>Registrarse</h1>
+        <div class="input">
+          <input type="email" placeholder="Introduce tu correo electrónico" required>
+        </div>
+        <div class="input">
+          <input type="password" placeholder="Introduce tu contraseña" required>
+        </div>
+        <div class="input">
+          <input type="password" placeholder="Repite tu contraseña" required>
+        </div>
+        <button class="btn_sesion">Comencemos</button>
+        <div class="form_btn">
+          ¿Ya tienes una cuenta? <a href="#" id="form_regis_btn_login">Inicia sesión.</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+  <!-- Hero 1 -->
+
+  <div class="hero1">
+    <h1>Crea, administra y colabora en proyectos</h1>
+    <p>Crea tus propios proyectos, invita a otros usuarios y asigna tareas.<br>La forma más rápida de organizarte.</p>
+    <button class="empezar" id="empezar">Empieza ahora</button>
+  </div>
+  
+  <!-- Hero 2 -->
+  
+  <div class="hero2">
+
+  </div>
+
+
+  <!-- JavaScript -->
+
   <script src="script.js"></script>
+
 </body>
 </html>

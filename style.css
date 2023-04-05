@@ -7,58 +7,105 @@
 }
 
 
+body {
+    background-image: url("./imgs/fondo.png");
+    background-position: 40vw 10vh;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1700px) {
+    body {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    body {
+      font-size: 12px;
+    }
+  }
+
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14vw;
+}
+
 /* Cabecera */
 
 header {
-    /* position: fixed; */
     justify-content: space-between;
+    position: fixed;
     display: flex;
-    margin-top: 20px;
-    padding: 10px 190px;
+    top: 0;
+    left: 0;
+    padding: 0px 14%;
     width: 100%;
-    /* background: red; */
-    /* align-items: center; */
-    /* z-index: 99; */
+    height: 70px;
+    align-items: center;
+    z-index: 1;
+    background-color: transparent;
+    transition: background-color .3s ease-in-out;
+}
+
+header.activo {
+    background-color: #fff;
+    border-bottom: 1px rgb(128, 128, 128, 0.2) solid;
+    
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     user-select: none;
     font-size: 2em;
     color: black;
 }
 
-.navegacion a {
-    position: relative;
+.hamburguesa {
+    display: none;
+}
+
+.op_nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.op_nav a {
     font-weight: 500;
-    margin-left: 45px;
-    color: black;
+    font-size: 17px;
     text-decoration: none;
+    margin: 0px 30px;
+    padding: 5px 0px;
+    cursor: pointer;
+    color: black;
 }
 
-.navegacion a::after {
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    content: '';
-    border-radius: 4px;
-    width: 100%;
-    background: black;
-    transform: scale(0);
-    transition: transform .3s;
+.op_nav a:hover {
+    color: rgb(255, 213, 0);
 }
 
-.navegacion a:hover::after {
-    transform: scale(1);
+.op_ses {
+    display: flex;
+    align-items: center;
 }
 
-.navegacion .sesion {
-    position: relative;
+.op_ses a {
     font-weight: 500;
-    margin-left: 300px;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
 }
 
-.navegacion .btn_registro {
+.op_ses a:hover {
+    color: rgb(255, 213, 0);
+}
+
+.op_ses .btn_registro {
     width: 125px;
     height: 40px;
     font-size: 1em;
@@ -68,15 +115,13 @@ header {
     cursor: pointer;
     color: #fff;
     background-color: black;
-    border: 2px solid black;
 }
 
-.navegacion .btn_registro:hover {
+.op_ses .btn_registro:hover {
     background-color: rgb(55, 55, 55);
-    border: 2px solid rgb(55, 55, 55);
 }
 
-.formularios {
+.fondo_opaco {
     position: fixed;
     display: none;
     top: 0;
@@ -87,31 +132,34 @@ header {
     background-color: rgb(0, 0, 0, 0.5);
 }
 
-/* Login */
 
-.login_form   {
+/* Formularios */
+
+.form_login,
+.form_registro   {
     position: absolute;
     display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 350px;
-    padding: 40px;
+    min-width: 25vw;
+    min-height: 50vh;
+    padding: 30px;
     border-radius: 4px;
     background: #fff;
 }
 
-.login_form h1 {
+.form_login h1,
+.form_registro h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.caja  {
+.input  {
     margin-top: 15px;
-    margin-bottom: 7px;
 }
 
-.caja input {
+.input input {
     padding: 0 10px;
     width: 100%;
     height: 35px;
@@ -121,13 +169,14 @@ header {
     background: rgb(250, 250, 250);
 }
 
-.caja input:focus {
+.input input:focus {
     border: 2px solid black;
 }
 
 .olv_cont {
+    display: flex;
     font-size: .9em;
-    padding: 0px 2px;
+    margin: 10px 2px;
 }
 
 .btn_sesion {
@@ -141,81 +190,58 @@ header {
     cursor: pointer;
     color: #fff;
     background-color: black;
-    border: 2px solid black;
 }
 
 .btn_sesion:hover {
     background-color: rgb(55, 55, 55);
-    border: 2px solid rgb(55, 55, 55);
 }
 
-.log_regis {
+.form_btn {
+    margin-left: 2px;
     font-size: .9em;
-    padding: 0px 1px;
 }
 
 
-/* Registro */
+/* Hero 1 */
 
-.registro_form   {
-    position: absolute;
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    padding: 40px;
-    border-radius: 4px;
-    background: #fff;
+.hero1 {
+    position: relative;
+    margin-top: 35vh;
+    text-align: left;
+    margin-left: 8vw;
 }
 
-.registro_form h1 {
-    text-align: center;
-    margin-bottom: 30px;
+.hero1 h1 {
+    font-size: 2.2em;
 }
 
-.caja  {
+.hero1 p{
     margin-top: 15px;
-    margin-bottom: 7px;
+    font-size: 1.5em;
+    font-weight: 300;
 }
 
-.caja input {
-    padding: 0 10px;
-    width: 100%;
-    height: 35px;
-    outline: none;
-    border-radius: 4px;
-    border: none;
-    background: rgb(250, 250, 250);
-}
-
-.caja input:focus {
-    border: 2px solid black;
-}
-
-.olv_cont {
-    font-size: .9em;
-}
-
-.btn_sesion {
-    width: 100%;
-    height: 38px;
-    margin-top: 30px;
-    margin-bottom: 7px;
-    font-size: 1em;
+.empezar {
+    margin-top: 40px;
+    width: 230px;
+    height: 60px;
+    font-size: 1.3em;
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
     color: #fff;
     background-color: black;
-    border: 2px solid black;
 }
 
-.btn_sesion:hover {
-    background-color: rgb(55, 55, 55);
-    border: 2px solid rgb(55, 55, 55);
-}
 
-.log_regis {
-    font-size: .9em;
+/* Hero 2 */
+
+.hero2 {
+    position: relative;
+    top: 460px;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    background-color: rgb(207, 207, 207);
+    
 }
