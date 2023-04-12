@@ -6,34 +6,23 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-body {
+.index_html {
     background-image: url("./imgs/fondo.png");
     background-position: 40vw 10vh;
     background-size: 55%;
     background-repeat: no-repeat;
-    font-size: 15px;
+    font-size: 13px;
 }
 
-@media screen and (max-width: 1700px) {
-    body {
-      font-size: 13px;
-    }
-  }
-
-  @media screen and (max-width: 1500px) {
-    body {
-      font-size: 12px;
-    }
-  }
-
-
-  img {
+img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 14vw;
+    max-height: 100%;
 }
+
 
 /* Cabecera */
 
@@ -45,17 +34,19 @@ header {
     left: 0;
     padding: 0px 14%;
     width: 100%;
-    height: 70px;
+    height: 60px;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
     background-color: transparent;
+    border-bottom: 1px rgb(128, 128, 128, 0) solid;
     transition: background-color .3s ease-in-out;
+    transition: border-bottom .3s ease-in-out;
 }
 
 header.activo {
+    z-index: 100;
     background-color: #fff;
     border-bottom: 1px rgb(128, 128, 128, 0.2) solid;
-    
 }
 
 .logo {
@@ -66,11 +57,11 @@ header.activo {
     color: black;
 }
 
-.hamburguesa {
+#hamburguesa {
     display: none;
 }
 
-.op_nav ul {
+.op_nav {
     display: flex;
     list-style: none;
 }
@@ -86,7 +77,7 @@ header.activo {
 }
 
 .op_nav a:hover {
-    color: rgb(255, 213, 0);
+    color: rgb(255, 221, 85);
 }
 
 .op_ses {
@@ -102,13 +93,13 @@ header.activo {
 }
 
 .op_ses a:hover {
-    color: rgb(255, 213, 0);
+    color: rgb(255, 221, 85);
 }
 
 .op_ses .btn_registro {
     width: 125px;
     height: 40px;
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 500;
     margin-left: 35px;
     border-radius: 4px;
@@ -128,7 +119,7 @@ header.activo {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 100;
     background-color: rgb(0, 0, 0, 0.5);
 }
 
@@ -143,8 +134,8 @@ header.activo {
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 25vw;
-    min-height: 50vh;
-    padding: 30px;
+    min-height: 38vh;
+    padding: 3vh 30px 3vh 30px;
     border-radius: 4px;
     background: #fff;
 }
@@ -162,7 +153,7 @@ header.activo {
 .input input {
     padding: 0 10px;
     width: 100%;
-    height: 35px;
+    height: 5vh;
     outline: none;
     border-radius: 4px;
     border: none;
@@ -175,16 +166,16 @@ header.activo {
 
 .olv_cont {
     display: flex;
-    font-size: .9em;
-    margin: 10px 2px;
+    margin: 1vh 2px;
+    font-size: 1.3em;
 }
 
 .btn_sesion {
     width: 100%;
-    height: 38px;
-    margin-top: 30px;
+    height: 4vh;
+    margin-top: 25px;
     margin-bottom: 7px;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
@@ -197,32 +188,41 @@ header.activo {
 }
 
 .form_btn {
+    margin-top: 1vh;
     margin-left: 2px;
-    font-size: .9em;
+    font-size: 1.3em;
+}
+
+::placeholder {
+    font-size: 1.2em;
 }
 
 
-/* Hero 1 */
+/* Panel 1 */
 
-.hero1 {
+.panel1 {
     position: relative;
-    margin-top: 35vh;
+    width: 100%;
+    top: 35vh;
+    left: 0;
     text-align: left;
+}
+
+.panel1 h1 {
     margin-left: 8vw;
+    font-size: 2.3em;
 }
 
-.hero1 h1 {
-    font-size: 2.2em;
-}
-
-.hero1 p{
+.panel1 p{
     margin-top: 15px;
-    font-size: 1.5em;
+    margin-left: 8vw;
+    font-size: 1.6em;
     font-weight: 300;
 }
 
 .empezar {
     margin-top: 40px;
+    margin-left: 8vw;
     width: 230px;
     height: 60px;
     font-size: 1.3em;
@@ -233,15 +233,487 @@ header.activo {
     background-color: black;
 }
 
+.empezar:hover {
+    background-color: rgb(55, 55, 55);
+}
 
-/* Hero 2 */
 
-.hero2 {
+/* Panel 2 */
+
+.panel2 {
     position: relative;
-    top: 460px;
+    top: 80.8vh;
     left: 0;
     width: 100%;
-    height: 550px;
-    background-color: rgb(207, 207, 207);
+    height: 50vh;
+    background-color: rgb(252, 252, 252);
+}
+
+.panel2 .panel2texto {
+    position: absolute;
+    top: 16vh;
+    left: 55vw;
+    width: 32vw;
+    height: 300px;
+    z-index: 1;
+}
+
+.panel2 h1 {
+    position: relative;
+    font-size: 2.3em;
+}
+
+.panel2 p {
+    position: relative;
+    margin-top: 3.5vh;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.panel2 .panel2foto {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1vh;
+    left: 13vw;
+    width: 35vw;
+    height: 47vh;
+}
+
+.panel2 img {
+    position: relative;
+    width: 30vw;
+}
+
+
+/* Panel 3 */
+
+.panel3 {
+    position: relative;
+    top: 80.8vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+}
+
+.panel3 .panel3texto {
+    position: absolute;
+    top: 14vh;
+    left: 15vw;
+    width: 36vw;
+    height: 300px;
+}
+
+.panel3 h1 {
+    position: relative;
+    font-size: 2.3em;
+}
+
+.panel3 p {
+    position: relative;
+    margin-top: 3.5vh;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.panel3 .panel3foto {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5vh;
+    left: 52vw;
+    width: 36vw;
+    height: 39vh;
+}
+
+.panel3 img {
+    position: relative;
+    width: 29vw;
+}
+
+
+/* Panel 4 */
+
+.panel4 {
+    position: relative;
+    top: 80.8vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(252, 252, 252);
+}
+
+.panel4 .panel4texto {
+    position: absolute;
+    top: 13vh;
+    left: 55vw;
+    width: 32vw;
+    height: 300px;
+}
+
+.panel4 h1 {
+    position: relative;
+    font-size: 2.3em;
+}
+
+.panel4 p {
+    position: relative;
+    margin-top: 3.5vh;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.panel4 .panel4foto {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 42vh;
+    top: 5vh;
+    left: 10vw;
+}
+
+.panel4 img {
+    position: relative;
+    width: 31vw;
+}
+
+.panel4 .pie {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 53vh;
+    font-size: 1.2em;
+}
+
+
+/* Sobre nosotros */
+
+.nosotros {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 80.8vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     
+}
+
+.nosotros .nosotros_texto {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    width: 80vw;
+}
+
+.nosotros h1 {
+    font-size: 2.3em;
+}
+
+.nosotros p {
+    font-weight: 300;
+    font-size: 1.6em;
+    margin-top: 30px;
+}
+
+.nosotros .pie {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 85vh;
+    font-size: 1.2em;
+}
+
+.header2 {
+    justify-content: center;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+
+/* Soporte */
+
+.soporte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 10%;
+    border: 2px solid black;
+}
+
+.soporte form {
+    width: 100%;
+}
+
+.soporte h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 2vh;
+    font-size: 3.5em;
+    color: black;
+}
+
+.btn_enviar {
+    width: 20%;
+    height: 5vh;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background-color: black;
+}
+
+.btn_enviar:hover {
+    background-color: rgb(55, 55, 55);
+}
+
+.input_email_soporte,
+.input_asunto {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 30%;
+}
+
+.input_mensaje {
+    margin-top: 15px;
+    padding: 0 20px 0 20px;
+    width: 100%;
+}
+
+.input_email_soporte input,
+.input_asunto input,
+.input_mensaje textarea {
+    box-sizing: border-box;
+    padding: 0 10px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background: rgb(250, 250, 250);
+    width: 100%;
+    height: 4vh;
+}
+
+.input_mensaje textarea {
+    padding: 5px 10px;
+    resize: vertical;
+    height: 30vh;
+}
+
+.input_email_soporte input:focus,
+.input_mensaje textarea:focus,
+.input_asunto input:focus {
+    border: 2px solid black;
+}
+
+.inicio_soporte {
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0px 30px;
+    padding: 5px 0px;
+    cursor: pointer;
+    color: black;
+}
+
+.inicio_soporte:hover {
+    color: rgb(255, 221, 85);
+}
+
+
+/* Media querys */
+
+@media screen and (min-width: 2000px) { /* 2560 x 1440 */
+    .op_nav a { 
+        font-size: 23px;  
+    }
+    .op_ses a {
+        font-size: 23px;  
+    }
+    .op_ses .btn_registro {
+        width: 155px;
+        height: 55px;
+        font-size: 23px;  
+    }
+    .olv_cont {
+        font-size: 1.2em;
+    }
+    .btn_sesion {
+        font-size: 1.2em;
+    }
+    .form_btn {
+        font-size: 1.2em;
+    }
+    ::placeholder {
+        font-size: 20px;
+    }
+    header {
+        height: 80px;
+    }
+    .index_html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 3300px) { /* 3840 x 2160 */
+    .op_nav a { 
+        font-size: 35px;
+    }
+    .op_ses a {
+        font-size: 35px;  
+    }
+    .op_ses .btn_registro {
+        width: 200px;
+        height: 70px;
+        font-size: 30px;  
+    }
+    .empezar {
+        width: 300px;
+        height: 80px;
+    }
+    header {
+        height: 100px;
+    }
+    .index_html {
+        font-size: 26px;
+    }
+    ::placeholder {
+        font-size: 2.1em;
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    .index_html {
+        font-size: 10px;
+    }
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+        height: 50px;
+    }
+    .op_nav a {
+        padding: 5px 0;
+        margin: 0px 20px;
+        font-size: 15px;
+    }
+    .op_ses a {
+        font-size: 15px;
+    }
+    .op_ses .btn_registro {
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+    }
+    .empezar {
+        margin-top: 30px;
+        width: 150px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .index_html {
+        background-size: 650px;
+        background-position: 50% 10%;
+    }
+    .izquierda {
+        display: none;
+    }
+    .panel1 {
+        top: 77vh;
+        text-align: center;
+    }
+    .panel1 h1 {
+        margin-left: 0vw;
+        font-size: 2.3em;
+    }
+    .panel1 p{
+        margin-left: 0vw;
+        
+    }
+    .empezar {
+        margin-left: 0vw;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .index_html {
+        background-position: 50% 5%;
+        background-size: 550px;
+    }
+    #hamburguesa {
+        display: block;
+    }
+    .op_nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 4px;
+        background-color: rgb(255, 221, 85);
+        transition: all .5s ease;
+    }
+    .op_nav a {
+        display: block;
+        margin: 28px 0px 0px 20px;
+        padding: 10px 0px;
+        transition: all .5s ease;
+    }
+    .op_nav a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .op_nav.abierto {
+        right: 2%;
+    }
+    .form_login,
+    .form_registro   {
+        min-width: 35vw;
+        min-height: 38vh;
+    }
+    .panel2 .panel2foto {
+        width: 40vw;
+        height: 52vh;
+    }
+    .panel2 img {
+        width: 40vw;
+    }
+    .panel3 .panel3foto {
+        width: 41vw;
+        height: 44vh;
+    }
+    .panel3 img {
+        width: 41vw;
+    }
+    .panel4 .panel4foto {
+        width: 45vw;
+        height: 47vh;
+    }
+    .panel4 img {
+        width: 45vw;
+    }
+    .soporte {
+        margin: 10% 10%;
+    }
+    .input_email_soporte,
+    .input_asunto {
+        margin-top: 15px;
+        margin-left: 20px;
+        width: 50%;
+    }
 }
