@@ -31,7 +31,7 @@ function mostrar_form(form) {
 }
 
 function ocultar_forms() {
-  fondo_opaco.style.display = 'none';
+  fondo_opaco.style.display = "none";
   form_login.style.display = "none";
   form_registro.style.display = "none";
   body.style.overflow = "auto";
@@ -59,7 +59,7 @@ empezar.addEventListener("click", (event) => {
   mostrar_form("registro");
 });
 
-window.addEventListener('click', (event) => {
+window.addEventListener("click", (event) => {
   if (event.target === fondo_opaco) {
     ocultar_forms();
   }
@@ -79,7 +79,7 @@ hamburguesa.addEventListener("click", () => {
   op_nav.classList.toggle("abierto")  
 });
 
-funciones.addEventListener('click', () => {
+funciones.addEventListener("click", () => {
   panel2.scrollIntoView({ behavior: "smooth" });
 });
 

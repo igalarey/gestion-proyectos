@@ -6,13 +6,14 @@ Tareas:
     ✔ Responsiveness en tamaños más pequeños (Sólo pensado hasta tablets.) @done (10/4/2023, 13:51:19)
     ✔ Hacer el sobre nosotros. @done (10/4/2023, 16:23:36)
     ✔ Arreglar el header del soporte en tablet. (Ponerle fondo). @done (12/4/2023, 11:54:24)
+    ✔ Meter el add task debajo de cada tarjeta. @done (16/4/2023, 21:59:36)
+    ☐ Poner arriba el icono de tu perfil y el nombre.
+    ☐ Convertir Nueva tarea en un boton submit.
+    ☐ Que al crear un proyecto o una carpeta se creen arriba y que salgan con el icono correspondiente.
     ☐ Mejorar formularios. (ojo de ver contraseña, html y css de has olvidado tu contraseña...)
-    ☐ Mirar en el vídeo de David el registro.
-
-
+    ☐ Hacer el backend.
     ☐ Ir empezando la memoria.
-    ☐ Conectar la página a la base de datos.
 
     ✔ Mirar el drive del proyecto de David. @done (10/4/2023, 14:11:56)
-    ☐ Mirar extensiones para poner marcadores/puntos de interés en el código, cambiar tema del editor de texto.
+    ✔ Mirar extensiones para poner marcadores/puntos de interés en el código, cambiar tema del editor de texto. @done (15/4/2023, 20:03:16)
     ☐ Mirar un vídeo de shorcuts para vscode.

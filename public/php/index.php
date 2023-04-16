@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestión de proyectos</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 </head>
 
 <body class="index_html">
@@ -29,7 +29,7 @@
     <ion-icon name="menu-outline" size="large" id="hamburguesa"></ion-icon>
   </header>
 
-  <img src="./imgs/izquierda.jpg" alt="" class="izquierda">
+  <img src="/public/assets/img/izquierda.jpg" alt="" class="izquierda">
 
   <div class="fondo_opaco" id="fondo_opaco">
 
@@ -96,7 +96,7 @@
       </p>
     </div>
     <div class="panel2foto">
-      <img src="./imgs/panel2.jpg" alt="">
+      <img src="/public/assets/img/panel2.jpg" alt="">
     </div>
   </div>
 
@@ -113,7 +113,7 @@
       </p>
     </div>
     <div class="panel3foto">
-      <img src="./imgs/panel3.jpg" alt="">
+      <img src="/public/assets/img/panel3.jpg" alt="">
     </div>
   </div>
 
@@ -129,7 +129,7 @@
       </p>
     </div>
     <div class="panel4foto">
-      <img src="./imgs/panel4.png" alt="">
+      <img src="/public/assets/img/panel4.png" alt="">
     </div>
   </div>
 
@@ -159,7 +159,7 @@
 
   <!-- JavaScript -->
 
-  <script src="script.js"></script>
+  <script src="/public/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
